@@ -1,4 +1,5 @@
 # Doctrine Tutorial
+[Current Step](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#generating-the-database-schema)
 
 - Tutorial link: [http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html)
 - Tutorial code: [https://github.com/doctrine/doctrine2-orm-tutorial](https://github.com/doctrine/doctrine2-orm-tutorial)
