@@ -3,7 +3,7 @@
 - Tutorial link: [http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html)
 - Tutorial code: [https://github.com/doctrine/doctrine2-orm-tutorial](https://github.com/doctrine/doctrine2-orm-tutorial)
 
-[Bug Tracker](http://framework.zend.com/manual/en/zend.db.table.html)
+**[Bug Tracker](http://framework.zend.com/manual/en/zend.db.table.html)**
 - A Bugs has a description, creation date, status, reporter and engineer
 - A bug can occur on different products (platforms)
 - Products have a name.
