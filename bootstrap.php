@@ -25,6 +25,7 @@ $paths     = array(__DIR__."/src");
 $isDevMode = true;
 
 // Database configuration parameters
+// @see http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
 $conn = array(
     'driver' => 'pdo_sqlite',
     'path'   => __DIR__ . '/db.sqlite',
