@@ -1,5 +1,5 @@
 # Doctrine Tutorial
-[Current Step](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#adding-bug-and-user-entities)
+[Current Step](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#queries-for-application-use-cases)
 
 - Tutorial link: [http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html)
 - Tutorial code: [https://github.com/doctrine/doctrine2-orm-tutorial](https://github.com/doctrine/doctrine2-orm-tutorial)
