@@ -18,24 +18,13 @@ class Bug {
      * PROPERTIES
      *----------------------------------------------------------------------------------------------------*/
 
-    /**
-     * @Id @Column(type="integer") @GeneratedValue
-     */
+    /* @Id @Column(type="integer") @GeneratedValue */
     protected $id;
-
-    /**
-     * @Column(type="string")
-     */
+    /* @Column(type="string") */
     protected $description;
-
-    /**
-     * @Column(type="datetime")
-     */
+    /* @Column(type="datetime") */
     protected $created;
-
-    /**
-     * @Column(type="string")
-     */
+    /* @Column(type="string") */
     protected $status;
 
 
