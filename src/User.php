@@ -38,7 +38,15 @@ class User {
      *----------------------------------------------------------------------------------------------------*/
 
     // References to Bug entities
+    /**
+     * @OneToMany(targetEntity="Bug", mappedBy="reporter")
+     * @var Bug[]
+     */
     protected $reportedBugs = null;
+    /**
+     * @OneToMany(targetEntity="Bug", mappedBy="engineer")
+     * @var Bug[]
+     **/
     protected $assignedBugs = null;
 
 
