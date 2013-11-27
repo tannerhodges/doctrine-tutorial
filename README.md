@@ -7,7 +7,7 @@
 ### Dependencies:
 - [Composer](http://getcomposer.org/)
 
-### Objective
+### Objective:
 Create a [Bug Tracker](http://framework.zend.com/manual/en/zend.db.table.html)
 - A bug has a description, creation date, status, reporter and engineer
 - A bug can occur on different products (platforms)
