@@ -22,6 +22,7 @@
 - [Alternative PHP Cache](http://us1.php.net/apc)
 
 ### Additional Reading:
-- [http://en.wikipedia.org/wiki/Object-relational_mapping](http://en.wikipedia.org/wiki/Object-relational_mapping)
-- [http://en.wikipedia.org/wiki/Persistent_data_structure](http://en.wikipedia.org/wiki/Persistent_data_structure)
-- [http://framework.zend.com/manual/1.12/en/zend.db.table.html](http://framework.zend.com/manual/1.12/en/zend.db.table.html)
+- [Object-relational Mapping](http://en.wikipedia.org/wiki/Object-relational_mapping)
+- [Persistent Data Structure](http://en.wikipedia.org/wiki/Persistent_data_structure)
+- [Reflection API](http://php.net/manual/en/intro.reflection.php)
+- [Zend_Db_Table](http://framework.zend.com/manual/1.12/en/zend.db.table.html)
