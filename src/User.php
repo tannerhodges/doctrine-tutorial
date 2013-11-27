@@ -38,8 +38,8 @@ class User {
      *----------------------------------------------------------------------------------------------------*/
 
     // References to Bug entities
-    protected $reportedBugs;
-    protected $assignedBugs;
+    protected $reportedBugs = null;
+    protected $assignedBugs = null;
 
 
     /*----------------------------------------------------------------------------------------------------
@@ -70,5 +70,21 @@ class User {
     public function setName($name) {
         $this->name = $name;
     } # End setName($name)
+
+
+    /*----------------------------------------------------------------------------------------------------
+     * REFERENCE METHODS
+     *----------------------------------------------------------------------------------------------------*/
+
+    /**
+     * Bug reference methods
+     */
+    public function addReportedBug($bug) {
+        $this->reportedBugs[] = $bug;
+    } # End addReportedBug($bug)
+
+    public function assignedToBug($bug) {
+        $this->assignedBugs[] = $bug;
+    } # End assignedToBug($bug)
 
 } # End User
