@@ -3,6 +3,8 @@
  * src/User.php
  * ---
  * Defines the User entity.
+ *
+ * @todo Document methods
  */
 
 /**

@@ -3,6 +3,8 @@
  * src/Bug.php
  * ---
  * Defines the Bug entity.
+ *
+ * @todo Document methods
  */
 
 /**
