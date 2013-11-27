@@ -10,7 +10,7 @@ require_once "bootstrap.php";
 
 /**
  * Get the product repository and pull products
- * @see \vendor\doctrine\orm\lib\Doctrine\ORM\EntityRepository
+ * @see vendor\doctrine\orm\lib\Doctrine\ORM\EntityRepository
  * @see http://docs.doctrine-project.org/en/2.0.x/reference/working-with-objects.html#querying
  */
 $productRepository = $entityManager->getRepository('Product');
