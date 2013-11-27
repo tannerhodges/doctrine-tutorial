@@ -43,11 +43,18 @@ class Bug {
      * REFERENCE PROPERTIES
      *----------------------------------------------------------------------------------------------------*/
 
-    // Reference to Product entities
-    protected $products = null;
+    /**
+     * Product reference properties
+     */
+    /* @ManyToMany(targetEntity="Product") */
+    protected $products;
 
-    // References to User entities
+    /**
+     * User reference properties
+     */
+    /* @ManyToOne(targetEntity="User", inversedBy="assignedBugs") */
     protected $engineer;
+    /* @ManyToOne(targetEntity="User", inversedBy="reportedBugs") */
     protected $reporter;
 
 
