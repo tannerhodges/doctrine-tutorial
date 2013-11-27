@@ -24,6 +24,13 @@ use Doctrine\ORM\EntityManager;
 $paths     = array(__DIR__."/src");
 $isDevMode = true;
 
+/**
+ * Set default timezone so that 'new DateTime("now")' will work correctly in Doctrine
+ * "It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function."
+ * @see http://docs.doctrine-project.org/en/2.0.x/cookbook/working-with-datetime.html#default-timezone-gotcha
+ */
+date_default_timezone_set('US/Eastern');
+
 // Database configuration parameters
 // @see http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
 $conn = array(
