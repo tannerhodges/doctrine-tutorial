@@ -45,10 +45,13 @@ class Bug {
      */
     protected $status;
 
-    /**
-     * The products property is used as a reference between entities (Bug and Product)
-     */
+    // Reference to Product entities
     protected $products;
+
+    // References to User entities
+    protected $engineer;
+    protected $reporter;
+
 
     /*----------------------------------------------------------------------------------------------------
      * METHODS
@@ -137,5 +140,27 @@ class Bug {
         return $this->status;
 
     } # End getStatus()
+
+
+    /**
+     * User reference methods
+     */
+    public function setEngineer($engineer) {
+        $engineer->assignedToBug($this);
+        $this->engineer = $engineer;
+    }
+
+    public function setReporter($reporter) {
+        $reporter->addReportedBug($this);
+        $this->reporter = $reporter;
+    }
+
+    public function getEngineer() {
+        return $this->engineer;
+    }
+
+    public function getReporter() {
+        return $this->reporter;
+    }
 
 } # End Bug
