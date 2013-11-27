@@ -13,7 +13,7 @@ require_once "bootstrap.php";
 $id = $argv[1];
 
 // Find the product in the database with the requested id
-// @see \vendor\doctrine\orm\lib\Doctrine\ORM\EntityManager::find()
+// @see vendor\doctrine\orm\lib\Doctrine\ORM\EntityManager::find()
 $product = $entityManager->find('Product', $id);
 
 // If no product was found, display message and exit
