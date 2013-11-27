@@ -3,8 +3,6 @@
  * src/Bug.php
  * ---
  * Defines the Bug entity.
- *
- * @todo Document methods
  */
 
 // Libraries
@@ -18,11 +16,6 @@ class Bug {
 
     /*----------------------------------------------------------------------------------------------------
      * PROPERTIES
-     *  -# $id
-     *  -# $description
-     *  -# $created
-     *  -# $status
-     *  -# $products
      *----------------------------------------------------------------------------------------------------*/
 
     /**
@@ -45,6 +38,11 @@ class Bug {
      */
     protected $status;
 
+
+    /*----------------------------------------------------------------------------------------------------
+     * REFERENCE PROPERTIES
+     *----------------------------------------------------------------------------------------------------*/
+
     // Reference to Product entities
     protected $products;
 
@@ -55,14 +53,6 @@ class Bug {
 
     /*----------------------------------------------------------------------------------------------------
      * METHODS
-     *  -# __construct()
-     *  -# getId()
-     *  -# getDescription()
-     *  -# setDescription()
-     *  -# setCreated()
-     *  -# getCreated()
-     *  -# setStatus()
-     *  -# getStatus()
      *----------------------------------------------------------------------------------------------------*/
 
     /**
@@ -78,69 +68,38 @@ class Bug {
 
     } # End __construct()
 
-    /**
-     * getId()
-     */
     public function getId() {
-
         return $this->id;
-
     } # End getId()
 
-    /**
-     * getDescription()
-     */
     public function getDescription() {
-
         return $this->description;
-
     } # End getDescription()
 
-    /**
-     * description)
-     */
     public function setDescription($description) {
-
         $this->description = $description;
+    } # End setDescription()
 
-    } # End description)
-
-    /**
-     * created)
-     */
     public function setCreated(DateTime $created) {
-
         $this->created = $created;
+    } # End setCreated()
 
-    } # End created)
-
-    /**
-     * getCreated()
-     */
     public function getCreated() {
-
         return $this->created;
-
     } # End getCreated()
 
-    /**
-     * status)
-     */
     public function setStatus($status) {
-
         $this->status = $status;
+    } # End setStatus()
 
-    } # End status)
-
-    /**
-     * getStatus()
-     */
     public function getStatus() {
-
         return $this->status;
-
     } # End getStatus()
 
+
+    /*----------------------------------------------------------------------------------------------------
+     * REFERENCE METHODS
+     *----------------------------------------------------------------------------------------------------*/
 
     /**
      * User reference methods
@@ -148,19 +107,19 @@ class Bug {
     public function setEngineer($engineer) {
         $engineer->assignedToBug($this);
         $this->engineer = $engineer;
-    }
+    } # End setEngineer()
 
     public function setReporter($reporter) {
         $reporter->addReportedBug($this);
         $this->reporter = $reporter;
-    }
+    } # End setReporter()
 
     public function getEngineer() {
         return $this->engineer;
-    }
+    } # End getEngineer()
 
     public function getReporter() {
         return $this->reporter;
-    }
+    } # End getReporter()
 
 } # End Bug
