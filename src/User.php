@@ -18,10 +18,6 @@ class User {
 
     /*----------------------------------------------------------------------------------------------------
      * PROPERTIES
-     *  -# $id
-     *  -# $name
-     *  -# $reportedBugs
-     *  -# $assignedBugs
      *----------------------------------------------------------------------------------------------------*/
 
     /**
@@ -36,6 +32,11 @@ class User {
      */
     protected $name;
 
+
+    /*----------------------------------------------------------------------------------------------------
+     * REFERENCE PROPERTIES
+     *----------------------------------------------------------------------------------------------------*/
+
     // References to Bug entities
     protected $reportedBugs;
     protected $assignedBugs;
@@ -43,10 +44,6 @@ class User {
 
     /*----------------------------------------------------------------------------------------------------
      * METHODS
-     *  -# __construct()
-     *  -# getId()
-     *  -# getName()
-     *  -# setName()
      *----------------------------------------------------------------------------------------------------*/
 
     /**
@@ -62,31 +59,16 @@ class User {
 
     } # End __construct()
 
-    /**
-     * getId()
-     */
     public function getId() {
-
         return $this->id;
-
     } # End getId()
 
-    /**
-     * getName()
-     */
     public function getName() {
-
         return $this->name;
-
     } # End getName()
 
-    /**
-     * setName($name)
-     */
     public function setName($name) {
-
         $this->name = $name;
-
     } # End setName($name)
 
 } # End User
