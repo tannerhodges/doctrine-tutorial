@@ -7,6 +7,9 @@
  * @todo Document methods
  */
 
+// Libraries
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @Entity(repositoryClass="BugRepository") @Table(name="bugs")
  */
@@ -19,6 +22,7 @@ class Bug {
      *  -# $description
      *  -# $created
      *  -# $status
+     *  -# $products
      *----------------------------------------------------------------------------------------------------*/
 
     /**
@@ -41,9 +45,14 @@ class Bug {
      */
     protected $status;
 
+    /**
+     * The products property is used as a reference between entities (Bug and Product)
+     */
+    protected $products;
 
     /*----------------------------------------------------------------------------------------------------
      * METHODS
+     *  -# __construct()
      *  -# getId()
      *  -# getDescription()
      *  -# setDescription()
@@ -52,6 +61,19 @@ class Bug {
      *  -# setStatus()
      *  -# getStatus()
      *----------------------------------------------------------------------------------------------------*/
+
+    /**
+     * Initialize new Bug instances
+     * @see http://www.php.net/manual/en/language.oop5.decon.php
+     */
+    public function __construct() {
+
+        // Use ArrayCollection to initialize the products property
+        // "... a Collection implementation that wraps a regular PHP array"
+        // @see vendor\doctrine\collections\lib\Doctrine\Common\Collections\ArrayCollection
+        $this->products = new ArrayCollection();
+
+    } # End __construct()
 
     /**
      * getId()
