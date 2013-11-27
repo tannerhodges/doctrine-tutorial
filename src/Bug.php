@@ -44,7 +44,7 @@ class Bug {
      *----------------------------------------------------------------------------------------------------*/
 
     // Reference to Product entities
-    protected $products;
+    protected $products = null;
 
     // References to User entities
     protected $engineer;
@@ -100,6 +100,17 @@ class Bug {
     /*----------------------------------------------------------------------------------------------------
      * REFERENCE METHODS
      *----------------------------------------------------------------------------------------------------*/
+
+    /**
+     * Product reference methods
+     */
+    public function assignToProduct($product) {
+        $this->products[] = $product;
+    } # End assignToProduct($product)
+
+    public function getProducts() {
+        return $this->products;
+    } # End getProducts()
 
     /**
      * User reference methods
