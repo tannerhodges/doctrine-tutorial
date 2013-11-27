@@ -40,6 +40,7 @@ class Bug {
 
     /**
      * User reference properties
+     * @see http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-many-bidirectional
      */
     /* @ManyToOne(targetEntity="User", inversedBy="assignedBugs") */
     protected $engineer;
