@@ -22,6 +22,7 @@
 - [Alternative PHP Cache](http://us1.php.net/apc)
 
 ### Additional Reading:
+- [Association Mapping](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html)
 - [Object-relational Mapping](http://en.wikipedia.org/wiki/Object-relational_mapping)
 - [Persistent Data Structure](http://en.wikipedia.org/wiki/Persistent_data_structure)
 - [Reflection API](http://php.net/manual/en/intro.reflection.php)
