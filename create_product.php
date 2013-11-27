@@ -1,6 +1,6 @@
 <?php
 /**
- * create_product.php
+ * create_product.php <name>
  * ---
  * Script to insert products into the database.
  */
