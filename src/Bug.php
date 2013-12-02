@@ -94,7 +94,7 @@ class Bug {
     } # End getStatus()
 
     public function close() {
-        $this->status = "CLOSE";
+        $this->status = "CLOSED";
     } # End close()
 
 
