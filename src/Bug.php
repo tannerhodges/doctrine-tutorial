@@ -93,6 +93,10 @@ class Bug {
         return $this->status;
     } # End getStatus()
 
+    public function close() {
+        $this->status = "CLOSE";
+    } # End close()
+
 
     /*----------------------------------------------------------------------------------------------------
      * REFERENCE METHODS
