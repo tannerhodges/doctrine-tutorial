@@ -22,7 +22,12 @@ if ($bug === null) {
     exit(1);
 }
 
-// Display bug information
+/**
+ * Display bug information
+ * @note "Since we only retrieved the bug by primary key both the engineer and reporter are not immediately loaded from the database but are replaced by LazyLoading proxies. These proxies will load behind the scenes, when the first method is called on them."
+ * @see vendor\doctrine\common\lib\Doctrine\Common\Proxy\ProxyGenerator::generateLazyPropertiesDefaults()
+ * @see vendor\doctrine\common\lib\Doctrine\Common\Proxy\ProxyGenerator::getLazyLoadedPublicProperties()
+ */
 echo "Bug: ".$bug->getDescription()."\n";
 echo "Engineer: ".$bug->getEngineer()->getName()."\n";
 ?>
