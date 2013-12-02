@@ -14,6 +14,9 @@ require_once "vendor/autoload.php";
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
+// Additional repositories
+require_once "src/BugRepository.php";
+
 /**
  * Settings
  * ---
