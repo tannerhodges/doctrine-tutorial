@@ -27,6 +27,7 @@ Create a [Bug Tracker](http://framework.zend.com/manual/en/zend.db.table.html)
 
 ### Additional Reading:
 - [Association Mapping](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html)
+- [Command Line Shell For SQLite](http://www.sqlite.org/sqlite.html)
 - DQL (in project): /vendor/doctrine/orm/docs/en/reference/dql-doctrine-query-language.rst
 	- Anything in /vendor/doctrine/orm/docs/en/ is worth reading.
 - [Object-relational Mapping](http://en.wikipedia.org/wiki/Object-relational_mapping)
