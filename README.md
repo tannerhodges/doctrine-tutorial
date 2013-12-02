@@ -1,6 +1,4 @@
 # Doctrine Tutorial
-[Current Step](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#queries-for-application-use-cases)
-
 - Tutorial link: [http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html)
 - Tutorial code: [https://github.com/doctrine/doctrine2-orm-tutorial](https://github.com/doctrine/doctrine2-orm-tutorial)
 
@@ -17,6 +15,12 @@ Create a [Bug Tracker](http://framework.zend.com/manual/en/zend.db.table.html)
 - The assigned engineer can close a bug.
 - A user can see all his reported or assigned bugs.
 - Bugs can be paginated through a list-view.
+
+### Issues:
+- [CLOSED Status](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#updating-entities)
+	- In `$this->status = "CLOSE";`, the string `CLOSE` should be `CLOSED`, with a 'D' on the end, so that it matches the code in [Entity Repositories](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#entity-repositories). Otherwise, bugs will not be retrieved correctly.
+- [Repository Class](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#adding-bug-and-user-entities)
+	- `@Entity(repositoryClass="BugRepository")` does not require the `repositoryClass` to be set just yet. Bug, like Product, can simply use the default repository (which it will do anyways until the BugRepository class is created). An update is called for later when adding the BugRepository class in [Entity Repositories](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html#entity-repositories)
 
 ### Debugging:
 > Lazy load proxies always contain an instance of Doctrine’s EntityManager and all its dependencies. Therefore a var_dump() will possibly dump a very large recursive structure which is impossible to render and read. You have to use Doctrine\Common\Util\Debug::dump() to restrict the dumping to a human readable level. Additionally you should be aware that dumping the EntityManager to a Browser may take several minutes, and the Debug::dump() method just ignores any occurrences of it in Proxy instances.
