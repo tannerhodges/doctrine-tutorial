@@ -9,7 +9,8 @@
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @Entity(repositoryClass="BugRepository") @Table(name="bugs")
+ * @Entity(repositoryClass="BugRepository") // Specify the class name of which Entity Repository to use
+ * @Table(name="bugs")                      // @see http://docs.doctrine-project.org/en/2.0.x/reference/working-with-objects.html#custom-repositories
  */
 
 class Bug {
