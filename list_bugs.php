@@ -15,23 +15,24 @@ require_once "bootstrap.php";
  * @note The QueryBuilder is an alternative to handwriting DQL: $entityManager->createQueryBuilder()
  * @see http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/reference/query-builder-api.html#creating-a-query-builder
  */
-$dql = "SELECT b, e, r
-		FROM Bug b
-			JOIN b.engineer e
-			JOIN b.reporter r
-		ORDER BY b.created DESC";
+$dql = "SELECT b, e, r, p
+        FROM Bug b
+            JOIN b.engineer e
+            JOIN b.reporter r
+            JOIN b.products p
+        ORDER BY b.created DESC";
 
+// Perform query and save results in an array
 $query = $entityManager->createQuery($dql);
-$query->setMaxResults(30);
-$bugs = $query->getResult();
+$bugs = $query->getArrayResult();
 
 // Loop through bugs and display
-foreach($bugs AS $bug) {
-    echo $bug->getDescription()." - ".$bug->getCreated()->format('d.m.Y')."\n";
-    echo "    Reported by: ".$bug->getReporter()->getName()."\n";
-    echo "    Assigned to: ".$bug->getEngineer()->getName()."\n";
-    foreach($bug->getProducts() AS $product) {
-        echo "    Platform: ".$product->getName()."\n";
+foreach ($bugs AS $bug) {
+    echo $bug['description'] . " - " . $bug['created']->format('d.m.Y')."\n";
+    echo "    Reported by: ".$bug['reporter']['name']."\n";
+    echo "    Assigned to: ".$bug['engineer']['name']."\n";
+    foreach($bug['products'] AS $product) {
+        echo "    Platform: ".$product['name']."\n";
     }
     echo "\n";
 }
